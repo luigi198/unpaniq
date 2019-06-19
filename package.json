@@ -1,0 +1,36 @@
+{
+  "name": "unpaniq",
+  "version": "1.0.0",
+  "description": "Alpha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luigi198/unpaniq.git"
+  },
+  "author": "Team9",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luigi198/unpaniq.git"
+  },
+  "homepage": "https://github.com/luigi198/unpaniq.git#README",
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "body-parser": "1.18.2",
+    "express": "^4.16.3",
+    "foreman": "2.0.0",
+    "fs-extra": "^4.0.2",
+    "mongodb": "2.2.33"
+  },
+  "devDependencies": {
+    "expect": "^23.3.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "supertest": "^3.1.0"
+  }
+}
