@@ -17,5 +17,6 @@ module.exports = function(app, db) {
 
   // API Routes
   app.post('/api/sensor-data', api.createSensorData);
+  app.get('/api/sensor-data', api.getSensorData);
 
 }

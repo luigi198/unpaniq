@@ -44,7 +44,12 @@ var insertSensorDataModel = function (db, sensorDataModel) {
   return db.collection('SensorDataModel').insertOne(sensorDataModel);
 };
 
+var getLatestSensorData = function (db) {
+  return db.collection('SensorDataModel').find().sort({createdAt: -1}).limit(1).toArray();
+};
+
 module.exports = {
   init: init,
-  insertSensorDataModel: insertSensorDataModel
+  insertSensorDataModel: insertSensorDataModel,
+  getLatestSensorData: getLatestSensorData
 };

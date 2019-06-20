@@ -31,5 +31,15 @@ module.exports = {
                 console.error(e);
                 responses.catchResponse(res, e);
             });
+    },
+    getSensorData: function (req, res) {
+        sensorDataModel.getLatestSensorData(req.db)
+            .then(function(data) {
+                responses.successResponse(res, {data: data[0]});
+            })
+            .catch(function (e) {
+                console.error(e);
+                responses.catchResponse(res, e);
+            });
     }
 };
