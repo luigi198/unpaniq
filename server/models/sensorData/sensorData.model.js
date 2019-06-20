@@ -8,7 +8,8 @@ var ObjectId = require('mongodb').ObjectID;
 // Constructor
 function SensorDataModel () {
   this.temperature = '';
-  this.heartRate = '';
+  this.heartRate = 0;
+  this.timestamp = 0;
   this.createdBy = '';
   this.createdAt = '';
   this.deletedBy = '';  
@@ -21,19 +22,22 @@ var init = function (sensorDataModel) {
     var initSensorDataModel = new SensorDataModel();
     //Save the new sensorDataModel with the passed values that are defined
     if (typeof sensorDataModel.temperature !== 'undefined') {
-        initSensorDataModel.temperature = sensorDataModel.temperature;
+      initSensorDataModel.temperature = sensorDataModel.temperature;
     }
     if (typeof sensorDataModel.heartRate !== 'undefined') {
-        initSensorDataModel.heartRate = sensorDataModel.heartRate;
+      initSensorDataModel.heartRate = sensorDataModel.heartRate;
+    }
+    if (typeof sensorDataModel.timestamp !== 'undefined') {
+      initSensorDataModel.timestamp = sensorDataModel.timestamp;
     }
     if (typeof sensorDataModel.createdBy !== 'undefined') {
-        initSensorDataModel.createdBy = sensorDataModel.createdBy;
+      initSensorDataModel.createdBy = sensorDataModel.createdBy;
     }
     if (typeof sensorDataModel.createdAt !== 'undefined') {
       initSensorDataModel.createdAt = sensorDataModel.createdAt;
     }
     if (typeof sensorDataModel.deletedBy !== 'undefined') {
-        initSensorDataModel.deletedBy = sensorDataModel.deletedBy;
+      initSensorDataModel.deletedBy = sensorDataModel.deletedBy;
     }
     //Resolve the Promise
     return resolve(initSensorDataModel);
